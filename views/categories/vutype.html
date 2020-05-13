@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="text-center">
+    <a href="/" style="text-decoration: none; color: brown;">
+        <h1>LA CUISINE EN STOCK</h1>
+    </a>
+</div>
+
+<hr>
+
+<h2>Catégories de recette : <span style="color: {{type.color}};">{{type.name}}</span></h2>
+<hr>
+
+    
+  
+    
+    
+
+
+
+{% for p in recettes %} 
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <a href="/{{p._id}}" style="text-decoration: none; color:brown;" ><h4 style="font-size: 30px;">{{p.name}}</h4></a>
+    </div>
+   
+    
+    
+
+</div>
+{% endfor %}
+{% endblock %}

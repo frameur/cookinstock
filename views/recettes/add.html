@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<div class="text-center">
+    <a href="/" style="text-decoration: none; color: brown;">
+        <h1>LA CUISINE EN STOCK</h1>
+    </a>
+</div>
+<form method="POST" action="{{endpoint}}" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="name">
+            <h4>Nom de la recette</h4>
+        </label>
+        <input type="text" class="form-control" id="name" name="name" value="{{recette.name}}">
+
+    </div>
+    <div class="form-group">
+        <label for="nbpersonne">
+            <h4>Nb de personne</h4>
+        </label>
+        <input type="text" class="form-control" id="nbpersonne" name="nbpersonne" value="{{recette.nbpersonne}}">
+    </div>
+    <div class="form-group">
+        <label for="préparation">
+            <h4>Temps de préparation</h4>
+        </label>
+        <input type="text" class="form-control" id="préparation" name="préparation" value="{{recette.préparation}}">
+    </div>
+    <div class="form-group">
+        <label for="cuisson">
+            <h4>Temps de cuisson</h4>
+        </label>
+        <input type="text" class="form-control" id="cuisson" name="cuisson" value="{{recette.cuisson}}">
+    </div>
+    <div class="form-group">
+        <label for="repos">
+            <h4>Temps de repos</h4>
+        </label>
+        <input type="text" class="form-control" id="repos" name="repos" value="{{recette.repos}}">
+    </div>
+
+    <div class="form-group">
+        <label for="description">
+            <h4>Ingredients</h4>
+        </label>
+        <textarea class="form-control" type="text" name="description" id="description"
+        value="{{recette.description}}">{{recette.description}}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="timing">
+            <h4>La Recette</h4>
+        </label>
+        <textarea class="form-control" type="text" name="timing" id="timing"
+        value="{{recette.timing}}">{{recette.timing}}</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="file">
+            <h5>Image</h5>
+        </label><br>
+        <input type="file" id="file" name="file">
+        <br><br>
+        <div class="form-group">
+            {% for type in types %}
+            <label>
+                <input type="checkbox" name="types[]" value="{{type._id}}"
+                    {% if recette.types.indexOf(type._id) != -1 %}checked{% endif %}>
+                {{type.name}}
+            </label>
+            {% endfor %}
+        </div>
+        <input type="submit" class="btn btn-primary" value="Enregistrer">
+    </div>
+</form>
+{% endblock  %}

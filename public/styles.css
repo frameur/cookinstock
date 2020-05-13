@@ -1,0 +1,66 @@
+
+
+/* font-family: 'Gloria Hallelujah', cursive; */
+
+
+body {
+    
+    background-image: url(./uploads/cookingfond.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    
+    
+}
+
+.container {
+    background-color: cornsilk;
+    margin-top: 100px;
+    border-radius: 20px;
+    border: darkgrey solid;
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+
+h1 {
+    color: red;
+    text-transform: uppercase;
+    margin: 20px;
+}
+h1:hover{
+    color: darkorange;
+
+}
+h2{
+    text-transform: uppercase;
+    
+}
+h2:hover{
+    color: darkblue;
+
+}
+h4{
+    text-align: justify;
+    margin: 22px;
+}
+
+a {
+    border-radius: 10px solid;
+
+}
+p{
+    text-align: justify;
+    margin-right: 10px;
+}
+
+.btn:hover {
+
+    text-decoration: none;
+    background-color: chartreuse;
+    color:brown;
+    
+
+
+}
