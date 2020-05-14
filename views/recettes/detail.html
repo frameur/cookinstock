@@ -8,15 +8,19 @@
         <h1>COOKING EN STOCK</h1>
     </a>
 </div>
+<button class="btn btn-primary" onclick="print('{{recette._id}}')">Imprimer en PDF</button>
 <div class="row">
     <div class="col-sm-3">
         <img src="/uploads/{{recette.picture}}" alt="{{recette.name}}" style="width: 100%;">
 
     </div>
+    
     <div class="col-sm-9">
 
         <a href="/add/{{recette._id}}" class="btn btn-success">Editer</a>
         <a href="/delete/{{recette._id}}" class="btn btn-danger">Supprimer</a><br><br>
+        
+        
         <h2 style="color:brown;">{{recette.name}}</h2>
 
         <br>
