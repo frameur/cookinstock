@@ -15,10 +15,13 @@ body {
 }
 
 .container {
-    background-color: cornsilk;
+    background-image: url(./image/papierfond.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(231, 221, 209);
     margin-top: 100px;
-    border-radius: 20px;
-    border: darkgrey solid;
+    /* border-radius: 20px; */
+    /* border: darkgrey solid; */
     font-family: 'Roboto', sans-serif;
     
 
@@ -61,6 +64,11 @@ p{
     background-color: chartreuse;
     color:brown;
     
-
-
+}
+a.btn.btn-primary {
+    
+    margin-left: 50px;
+    border-radius: 10px solid;
+    width: 250px;
+    
 }
