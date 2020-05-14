@@ -23,14 +23,14 @@ body {
     /* border-radius: 20px; */
     /* border: darkgrey solid; */
     font-family: 'Roboto', sans-serif;
-    
-
+    overflow-x: hidden;
 }
 
 h1 {
     color: red;
     text-transform: uppercase;
-    margin: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
 }
 h1:hover{
     color: darkorange;
@@ -42,6 +42,7 @@ h2{
 }
 h2:hover{
     color: darkblue;
+    
 
 }
 h4{
@@ -54,8 +55,9 @@ a {
 
 }
 p{
-    text-align: justify;
-    margin-right: 10px;
+    /* text-align: justify; */
+    margin: 0 15px 0 15px;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .btn:hover {
@@ -71,4 +73,7 @@ a.btn.btn-primary {
     border-radius: 10px solid;
     width: 250px;
     
+}
+ul{
+    margin-left: 30px;
 }

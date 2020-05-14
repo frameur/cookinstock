@@ -45,7 +45,11 @@ const upload = multer({
 mongoose.connect('mongodb://localhost:27017/cooking',{useNewUrlParser: true,
 useUnifiedTopology: true});
 
-// app.use(bodyparser.urlencoded);
+//middleware
+app.use(express.json());
+app.use(express.urlencoded({extended: false}))
+
+// fichier statique
 app.use(upload.single('file'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use(express.static("public"));
