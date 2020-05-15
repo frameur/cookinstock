@@ -46,9 +46,11 @@ const upload = multer({
 mongoose.connect('mongodb://localhost:27017/cooking',{useNewUrlParser: true,
 useUnifiedTopology: true});
 
+// mongodb+srv://cooking:MfBcYZjMiR8H3Twn@cooking-b8aut.mongodb.net/test
+
 //middleware
 app.use(express.json());
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: false}));
 
 // fichier statique
 app.use(upload.single('file'));
