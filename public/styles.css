@@ -9,6 +9,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 100vh;
     
     
     
@@ -18,6 +19,8 @@ body {
     background-image: url(./image/papierfond.webp);
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
+    
     background-color: rgb(231, 221, 209);
     margin-top: 100px;
     /* border-radius: 20px; */
