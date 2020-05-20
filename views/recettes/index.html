@@ -10,16 +10,21 @@
 
 
 <hr>
-{% for p in recettes  %}
+
 <div class="panel panel-default">
     <div class="panel-heading">
+        {% for p in recettes | reverse  %}
         <ul>
             <li>
+
+                
                 <a href="/{{p._id}}" style="text-decoration: none; color:brown;">
-                    <h2 style="font-size: 30px;">{{p.name }}</h2>
+                    <h2 style="font-size: 30px;">{{p.name  }}</h2>
                 </a>
+                
             </li>
         </ul>
+        {% endfor %}
     </div>
 
 
@@ -29,7 +34,7 @@
 
 
 </div>
-{% endfor %}
+
 
 
 {% endblock %}

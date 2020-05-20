@@ -1,12 +1,21 @@
 const express = require('express')
-const mongoose = require('mongoose')
-const nunjucks = require('nunjucks')
-const multer = require('multer')
-const path = require('path')
+    , mongoose = require('mongoose')
+    , nunjucks = require('nunjucks')
+    , multer = require('multer')
+    , path = require('path')
+    , app = express()
+    , port = 2000
 
-const port = 2000;
+//Mongodb
+mongoose.connect('mongodb://localhost:27017/cooking',{useNewUrlParser: true,
+useUnifiedTopology: true});
 
-const app = express();
+// mongodb+srv://cooking:MfBcYZjMiR8H3Twn@cooking-b8aut.mongodb.net/test
+
+//middleware
+app.use(express.json())
+app.use(express.urlencoded({extended: false}))
+
 
 // Upload image
 const storage = multer.diskStorage({
@@ -39,17 +48,6 @@ const upload = multer({
       cb(new Error("Le fichier doit être au format png, jpg, jpeg ou gif."));
   },
 });
-
-
-//Mongodb
-mongoose.connect('mongodb://localhost:27017/cooking',{useNewUrlParser: true,
-useUnifiedTopology: true});
-
-// mongodb+srv://cooking:MfBcYZjMiR8H3Twn@cooking-b8aut.mongodb.net/test
-
-//middleware
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
 
 // fichier statique
 app.use(upload.single('file'));

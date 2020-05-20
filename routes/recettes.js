@@ -1,6 +1,6 @@
-const router = require('express').Router();
-const Recette = require('./../models/Recette');
-const Type = require('./../models/Type')
+const router = require('express').Router()
+    , Recette = require('./../models/Recette')
+    , Type = require('./../models/Type')
 
 //Page accueil 
 router.get('/', (req, res) => {
@@ -61,7 +61,7 @@ router.post('/:id?', (req, res) =>{
             Recette.findById(req.params.id).then(resolve, reject);
         }
         else{
-            resolve (new Recette())
+            resolve (new Recette());
         }
                
     })
