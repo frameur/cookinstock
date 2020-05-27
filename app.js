@@ -7,10 +7,14 @@ const express = require('express')
     , port = 2000
 
 //Mongodb
-mongoose.connect('mongodb://localhost:27017/cooking',{useNewUrlParser: true,
-useUnifiedTopology: true});
+const db = require('./config/keys.js').MongoURI
+mongoose
+   .connect(db,{useNewUrlParser: true,useUnifiedTopology: true})
+   .then (() => console.log('connections  mongodb cloud')) 
+   .catch (err => console.log(err))
 
-// mongodb+srv://cooking:MfBcYZjMiR8H3Twn@cooking-b8aut.mongodb.net/test
+
+
 
 //middleware
 app.use(express.json())
