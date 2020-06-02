@@ -10,7 +10,7 @@ const express = require('express')
 const db = require('./config/keys.js').MongoURI
 mongoose
    .connect(db,{useNewUrlParser: true,useUnifiedTopology: true})
-   .then (() => console.log('connections  mongodb cloud')) 
+   .then (() => console.log('connection mongodb cloud')) 
    .catch (err => console.log(err))
 
 
