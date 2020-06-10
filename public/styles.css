@@ -62,6 +62,7 @@ h4{
 
 a {
     border-radius: 10px solid;
+   
 
 }
 p{
@@ -69,12 +70,20 @@ p{
     margin: 0 15px 0 15px;
     font-family: 'Gloria Hallelujah', cursive;
 }
+.btn{
+    color: #fff;
+    background-color: #333;
+    transition: all 1s ease-out;
+}
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
 
     text-decoration: none;
     background-color: chartreuse;
     color:brown;
+    font-weight: 700;
+    
     
 }
 a.btn.btn-primary {
