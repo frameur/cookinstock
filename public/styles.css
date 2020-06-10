@@ -26,7 +26,7 @@ img {
     
     background-color: rgb(231, 221, 209);
     margin-top: 100px;
-    /* border-radius: 20px; */
+    border-radius: 5px;
     
     box-shadow: 3px 3px 10px 5px #000,
               0 0 4px rgba(0, 0, 0, .5) inset;
