@@ -30,21 +30,22 @@ body {
 }
 
 h1 {
-    color: red;
+    color: black;
     text-transform: uppercase;
     margin-bottom: 20px;
     padding-top: 20px;
 }
 h1:hover{
-    color: darkorange;
+    color: red;
 
 }
 h2{
     text-transform: uppercase;
-    
+    color: black;
 }
 h2:hover{
-    color: darkblue;
+    color: red;
+    transition: ease-out 0.8;
     
 
 }
@@ -79,4 +80,40 @@ a.btn.btn-primary {
 }
 ul{
     margin-left: 30px;
+}
+@media (max-width: 500px){
+    p.lead{
+        font-size: 10px !important;
+    }
+    h2{
+        font-size: 18px;
+        text-align: center;
+    }
+    h3{
+        font-size: 12px;
+    }
+    a.label.label-default{
+        font-size: 15px !important;
+    }
+    a.btn.btn-primary{
+        font-size: 8px;
+        width: 150px;
+
+    }
+    button.btn.btn-primary{
+        font-size: 8px;
+    }
+    a.btn.btn-success{
+        font-size: 8px;
+    }
+    a.btn.btn-danger{
+        font-size: 8px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 15px !important;
+        
+    }
 }
