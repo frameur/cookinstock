@@ -14,6 +14,9 @@ body {
     
     
 }
+img {
+    box-shadow: 1px 1px 12px #555; 
+  }
 
 .container {
     background-image: url(./image/old-paper-642132__480.webp);
@@ -24,7 +27,10 @@ body {
     background-color: rgb(231, 221, 209);
     margin-top: 100px;
     /* border-radius: 20px; */
-    /* border: darkgrey solid; */
+    
+    box-shadow: 3px 3px 10px 5px #000,
+              0 0 4px rgba(0, 0, 0, .5) inset;
+    /* box-shadow: 3px 3px 10px 5px #000; */
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
@@ -45,7 +51,7 @@ h2{
 }
 h2:hover{
     color: red;
-    transition: ease-out 0.8;
+    
     
 
 }
