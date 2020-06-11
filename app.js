@@ -79,7 +79,7 @@ nunjucks.configure('views', {
 
 // Localhost
 
-app.listen(port,process.env.PORT,process.env.IP, () => {
+app.listen(process.env.PORT || 2000, () => {
   console.log(
     `Ecoute le port ${port}, lancé à : ${new Date().toLocaleString()}`
   );
