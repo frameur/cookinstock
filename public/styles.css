@@ -1,35 +1,33 @@
-
-
 /* font-family: 'Gloria Hallelujah', cursive; */
 
 
 body {
-    
+
     background-image: url(./image/cookingfond.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
-    
-    
-    
+
+
+
 }
+
 img {
-    box-shadow: 1px 1px 12px #555; 
-  }
+    box-shadow: 1px 1px 12px #555;
+}
 
 .container {
     background-image: url(./image/old-paper-642132__480.webp);
     background-size: cover;
+    opacity: 0.8;
     background-repeat: no-repeat;
     width: 100%;
-    
     background-color: rgb(231, 221, 209);
     margin-top: 100px;
     border-radius: 5px;
-    
     box-shadow: 3px 3px 10px 5px #000,
-              0 0 20px rgba(0, 0, 0, .5) inset;
+        0 0 20px rgba(0, 0, 0, .5) inset;
     /* box-shadow: 3px 3px 10px 5px #000; */
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
@@ -41,36 +39,42 @@ h1 {
     margin-bottom: 20px;
     padding-top: 20px;
 }
-h1:hover{
+
+h1:hover {
     color: red;
 
 }
-h2{
+
+h2 {
     text-transform: uppercase;
     color: black;
 }
-h2:hover{
+
+h2:hover {
     color: red;
-    
-    
+
+
 
 }
-h4{
+
+h4 {
     text-align: justify;
     margin: 22px;
 }
 
 a {
     border-radius: 10px solid;
-   
+
 
 }
-p{
+
+p {
     /* text-align: justify; */
     margin: 0 15px 0 15px;
     font-family: 'Gloria Hallelujah', cursive;
 }
-.btn{
+
+.btn {
     color: #fff;
     background-color: #333;
     transition: all 1s ease-out;
@@ -81,54 +85,66 @@ p{
 
     text-decoration: none;
     background-color: chartreuse;
-    color:brown;
+    color: brown;
     font-weight: 700;
-    
-    
+
+
 }
+
 a.btn.btn-primary {
-    
-    
+
+
     border-radius: 10px solid;
     width: 250px;
-    
+
 }
-ul{
+
+ul {
     margin-left: 30px;
 }
-@media (max-width: 500px){
-    p.lead{
+
+@media (max-width: 500px) {
+    p.lead {
         font-size: 10px !important;
     }
-    h2{
+
+    h2 {
         font-size: 18px;
         text-align: center;
     }
-    h3{
+
+    h3 {
         font-size: 12px;
     }
-    a.label.label-default{
+
+    a.label.label-default {
         font-size: 15px !important;
     }
-    a.btn.btn-primary{
+
+    a.btn.btn-primary {
         font-size: 8px;
         width: 150px;
 
     }
-    button.btn.btn-primary{
+
+    button.btn.btn-primary {
         font-size: 8px;
     }
-    a.btn.btn-success{
+
+    a.btn.btn-success {
         font-size: 8px;
     }
-    a.btn.btn-danger{
+
+    a.btn.btn-danger {
         font-size: 8px;
     }
-    h1{
+
+    h1 {
         font-size: 20px;
     }
-    h2{
+
+    h2 {
         font-size: 15px !important;
-        
+
     }
 }
