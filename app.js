@@ -77,6 +77,16 @@ nunjucks.configure('views', {
 
  app.set("view engine", "html")
 
+
+ //Page erreur
+app.get('*', function(req, res){
+  res.status(404);
+  res.render('404.html', {
+      title: "Cette page n'existe pas.",
+      
+  });
+});
+
 // Localhost
 
 app.listen(process.env.PORT || 2000, () => {
