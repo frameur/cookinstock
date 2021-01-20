@@ -13,9 +13,6 @@ mongoose
    .then (() => console.log('connection mongodb cloud')) 
    .catch (err => console.log(err))
 
-
-
-
 //middleware
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
