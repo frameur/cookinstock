@@ -8,26 +8,18 @@
 </div> -->
 
 <hr>
-
 <h2>Catégories de recette : <span style="color: {{type.color}};">{{type.name}}</span></h2>
+<h2>liste recette : <span >{{p.id}}</span></h2>
+
 <hr>
-
-    
-  
-    
-    
-
-
 
 {% for type in recettes %} 
 <div class="panel panel-default" >
     <div class="panel-heading">
-        <a href="/{{p._id}}" style="text-decoration: none; color:brown;" ><h4 style="font-size: 30px;">{{recettes.name}}</h4></a>
+        <a href="/{{p._id}}" style="text-decoration: none; color:brown;" ><h4 style="font-size: 30px;">{{type.name}}</h4></a>
+        
     </div>
    
-    
-    
-
 </div>
 {% endfor %}
 {% endblock %}
