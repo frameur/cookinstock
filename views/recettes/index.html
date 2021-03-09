@@ -1,35 +1,27 @@
-{% extends "layout.html" %}
-
-{% block content %}
-
-
-<a href="/new" class="btn btn-primary ">Ajouter une recette</a>
-
-<hr>
-<h2 style="text-align: center;">RECETTES</h2>
+{% extends "layout.html" %} {% block content %}
+<div class="row justify-content-center">
+  <a href="/new" class="btn btn-primary">Ajouter une recette</a>
+</div>
+<hr />
+<h3 style="text-align: center">RECETTES</h3>
+<br>
 
 
-<hr>
+  
+    {% for p in recettes | reverse %}
 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        {% for p in recettes | reverse  %}
+    <a href="/{{p._id}}" style="text-decoration: none; color: brown">
+      <h2 style="font-size: 30px">{{p.name }}</h2>
+      <img src="/uploads/{{p.picture}}" alt="{{p.name}}" style="width: 10%" />
+      
+    </a>
+<hr />
+    {% endfor %}
+  
 
-        <a href="/{{p._id}}" style="text-decoration: none; color:brown;">
-            <h2 style="font-size: 30px;">{{p.name  }}</h2>
-        </a>
-
-        {% endfor %}
-    </div>
-
-
-    <!-- <div class="panel-footer">
+  <!-- <div class="panel-footer">
         <h4>{{p.description}}</h4>
     </div> -->
-
-
-</div>
-
 
 
 {% endblock %}

@@ -10,20 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles.css">
-    <script>
-        function print(pdf) {
-            // Créer un IFrame.
-            const iframe = document.createElement('iframe');  
-            // Cacher le IFrame.    
-            iframe.style.visibility = "hidden"; 
-            // Définir la source.    
-            iframe.src = pdf;        
-            // Ajouter le IFrame sur la page Web.    
-            document.body.appendChild(iframe);  
-            iframe.contentWindow.focus();       
-            iframe.contentWindow.print(); // Imprimer.
-        }
-    </script>
+  
 
 
         <title>Recette de cuisine, dessert, entrée, soupe, poisson, viande, salade composée, végetarien, mélanger les ingrédients, cuisson vapeur, cuisson au four</title>
@@ -40,7 +27,7 @@
         {% block content %}
         
         {% endblock %}
-        <hr>
+        <br>
        
         <div class="text-center">
            <h3>Copyright Cookinstock © <script>
@@ -52,6 +39,20 @@
     <!-- Bootstrap core JavaScript -->
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.bundle.min.js"></script>
+  <script>
+        function print(pdf) {
+            // Créer un IFrame.
+            const iframe = document.createElement('iframe');  
+            // Cacher le IFrame.    
+            iframe.style.visibility = "hidden"; 
+            // Définir la source.    
+            iframe.src = pdf;        
+            // Ajouter le IFrame sur la page Web.    
+            document.body.appendChild(iframe);  
+            iframe.contentWindow.focus();       
+            iframe.contentWindow.print(); // Imprimer.
+        }
+    </script>
 </body>
 
 </html>
