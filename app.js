@@ -87,6 +87,6 @@ app.get('*', function(req, res){
 
 app.listen(process.env.PORT || 2000, () => {
   console.log(
-    `Ecoute le port ${port}, lancé le ${new Date().toLocaleString()}`
+    `Ecoute le port http://localhost:${port}, lancé le ${new Date().toLocaleString()}`
   );
 });

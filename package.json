@@ -1,11 +1,12 @@
 {
   "name": "cookinstock",
   "version": "1.0.0",
-  "description": "",
+  "description": "recette de cuisine",
+  "private":true,
   "homepage": "https://frameur.github.io/cookinstock",
   "main": "app.js",
   "scripts": {
-    "deploy": "npm run build&&-pages -d build",
+    "deploy": "npm run build&&gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "françois",
