@@ -1,3 +1,4 @@
 module.exports = {
-    MongoURI: "mongodb+srv://cooking:MfBcYZjMiR8H3Twn@cooking-b8aut.mongodb.net/test"
-}
+  MongoURI:
+    "mongodb+srv://framram:192258@recipes.mecqv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+};

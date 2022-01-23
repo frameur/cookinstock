@@ -1,22 +1,21 @@
-const express = require('express')
-    , mongoose = require('mongoose')
-    , nunjucks = require('nunjucks')
-    , multer = require('multer')
-    , path = require('path')
-    , app = express()
-    , port = 2000
+const express = require("express"),
+  mongoose = require("mongoose"),
+  nunjucks = require("nunjucks"),
+  multer = require("multer"),
+  path = require("path"),
+  app = express(),
+  port = 2000;
 
 //Mongodb
-const db = require('./config/keys.js').MongoURI
+const db = require("./config/keys.js").MongoURI;
 mongoose
-   .connect(db,{useNewUrlParser: true,useUnifiedTopology: true})
-   .then (() => console.log('connection mongodb cloud')) 
-   .catch (err => console.log(err))
+  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("connection mongodb cloud"))
+  .catch((err) => console.log(err));
 
 //middleware
-app.use(express.json())
-app.use(express.urlencoded({extended: false}))
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // Upload image
 const storage = multer.diskStorage({
@@ -27,7 +26,6 @@ const storage = multer.diskStorage({
     const ext = path.extname(file.originalname);
     const date = Date.now();
     cb(null, date + "-" + file.originalname);
-    
   },
 });
 const upload = multer({
@@ -41,45 +39,44 @@ const upload = multer({
       file.mimetype === "image/png" ||
       file.mimetype === "image/jpg" ||
       file.mimetype === "image/jpeg" ||
-      file.mimetype === "image/gif"  ||
+      file.mimetype === "image/gif" ||
       file.mimetype === "image/webp"
     ) {
       cb(null, true);
     } else
-      cb(new Error("Le fichier doit être au format png, jpg, jpeg ou gif."));
+      cb(
+        new Error("Le fichier doit être au format png, jpg, jpeg, gif et webp.")
+      );
   },
 });
 
 // fichier statique
-app.use(upload.single('file'));
-app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+app.use(upload.single("file"));
+app.use("/css", express.static(__dirname + "/node_modules/bootstrap/dist/css"));
 app.use(express.static("public"));
-app.use(express.static('files'));
+app.use(express.static("files"));
 
 //Routes models
-require('./models/Recette');
-require('./models/Type');
+require("./models/Recette");
+require("./models/Type");
 
-//Routes 
-app.use('/', require('./routes/recettes'));
-app.use('/types', require('./routes/types'));
+//Routes
+app.use("/", require("./routes/recettes"));
+app.use("/types", require("./routes/types"));
 
 //TEMPLATE
-nunjucks.configure('views', { 
-    autoescape: true, 
-    express: app,
+nunjucks.configure("views", {
+  autoescape: true,
+  express: app,
+});
 
- })
+app.set("view engine", "html");
 
- app.set("view engine", "html")
-
-
- //Page erreur
-app.get('*', function(req, res){
+//Page erreur
+app.get("*", function (req, res) {
   res.status(404);
-  res.render('404.html', {
-      title: "Cette page n'existe pas.",
-      
+  res.render("404.html", {
+    title: "Cette page n'existe pas.",
   });
 });
 
