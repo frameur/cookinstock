@@ -1,60 +1,56 @@
-{% extends "layout.html" %}
-
-{% block content %}
+{% extends "layout.html" %} {% block content %}
 
 <div class="row justify-content-center">
-    <div class="col-sm-5 ">
-        <img src="/uploads/{{recette.picture}}" alt="{{recette.name}}" style="width: 100%;">
-
-    </div>
-</div><br>
-
-<div class="row justify-content-center">
-
-
-    <div class="col-sm-11">
-
-        <a href="/add/{{recette._id}}" class="btn btn-success">Editer</a>
-        <a href="/delete/{{recette._id}}" class="btn btn-danger">Supprimer</a><br><br>
-
-
-        <h2 style="color:brown;">{{recette.name}}</h2>
-        <button class="btn btn-primary" onclick="print('{{recette._id}}')">Imprimer la recette</button>
-        <br>
-        
-        <h2 style="text-decoration: underline;">Ingrédients</h2>
-        <p class="lead" style="font-size: 30px;">
-            {{recette.description}}
-        </p>
-        
-
-        <a href="/list/{{recette._id}}" class="btn btn-primary">Ajouter à la liste de course</a>
-        <hr>
-        <h2 style="text-decoration: underline;">Progression de la recette</h2>
-        <p class="lead" style="font-size: 30px;">
-            {{recette.timing}}
-        </p>
-        <br>
-        <h3>Nb de personne : {{recette.nbpersonne}}</h3>
-        <br>
-
-        <h3>Temps de préparation : {{recette.préparation}}</h3>
-        <br>
-
-        <h3>Temps de cuisson : {{recette.cuisson}}</h3>
-
-        <br>
-        <h3>Temps de repos : {{recette.repos}}</h3>
-
-        <br>
-        <h3>Catégories : {% for t in recette.types %}
-            <a href="/types/{{t.name}}" class="label label-default"
-                >{{t.name}}</a>
-            {% endfor %}</h3>
-
-
-    </div>
+  <div class="col-sm-5">
+    <img
+      src="/uploads/{{recette.picture}}"
+      alt="{{recette.name}}"
+      style="width: 100%"
+    />
+  </div>
 </div>
+<br />
 
+<div class="row justify-content-center">
+  <div class="col-sm-11">
+    <a href="/add/{{recette._id}}" class="btn btn-success">Editer</a>
+    <a href="/delete/{{recette._id}}" class="btn btn-danger">Supprimer</a
+    ><br /><br />
+
+    <h2 style="color: brown">{{recette.name}}</h2>
+    <button class="btn btn-primary" onclick="print('{{recette._id}}')">
+      Imprimer la recette
+    </button>
+    <br />
+
+    <h2 style="text-decoration: underline">Ingrédients</h2>
+    <p class="lead" style="font-size: 30px">{{recette.description}}</p>
+
+    <a href="/list/{{recette._id}}" class="btn btn-primary"
+      >Ajouter à la liste de course</a
+    >
+    <hr />
+    <h2 style="text-decoration: underline">Progression de la recette</h2>
+    <p class="lead" style="font-size: 30px">{{recette.timing}}</p>
+    <br />
+    <h3>Nb de personne : {{recette.nbpersonne}}</h3>
+    <br />
+
+    <h3>Temps de préparation : {{recette.préparation}}</h3>
+    <br />
+
+    <h3>Temps de cuisson : {{recette.cuisson}}</h3>
+
+    <br />
+    <h3>Temps de repos : {{recette.repos}}</h3>
+
+    <br />
+    <h3>
+      Catégories : {% for t in recette.types %}
+      <a href="/types/{{t.name}}" class="label label-default">{{t.name}}</a>
+      {% endfor %}
+    </h3>
+  </div>
+</div>
 
 {% endblock %}
